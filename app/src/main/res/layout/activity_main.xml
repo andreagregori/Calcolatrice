@@ -9,10 +9,10 @@
     <TableLayout
         android:id="@+id/tableLayout"
         android:layout_width="0dp"
-        android:layout_height="279dp"
-        android:layout_marginBottom="24dp"
+        android:layout_height="335dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="8dp"
+        android:stretchColumns="*"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -26,7 +26,7 @@
                 android:id="@+id/buttonCancella"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="76dp"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:background="@android:color/holo_orange_dark"
                 android:text="C"
                 tools:layout_editor_absoluteX="28dp"
@@ -36,7 +36,7 @@
                 android:id="@+id/buttonMemoriaPiu"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:text="M+"
                 tools:layout_editor_absoluteX="94dp"
                 tools:layout_editor_absoluteY="65dp" />
@@ -45,7 +45,7 @@
                 android:id="@+id/buttonMemoria"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:text="M"
                 tools:layout_editor_absoluteX="117dp"
                 tools:layout_editor_absoluteY="38dp" />
@@ -54,7 +54,7 @@
                 android:id="@+id/buttonDivisione"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:text="/"
                 tools:layout_editor_absoluteX="261dp"
                 tools:layout_editor_absoluteY="68dp" />
@@ -69,7 +69,7 @@
                 android:id="@+id/button7"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="86dp"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:text="7"
                 tools:layout_editor_absoluteX="28dp"
                 tools:layout_editor_absoluteY="308dp" />
@@ -78,7 +78,7 @@
                 android:id="@+id/button8"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:text="8"
                 tools:layout_editor_absoluteX="116dp"
                 tools:layout_editor_absoluteY="316dp" />
@@ -87,7 +87,7 @@
                 android:id="@+id/button9"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:text="9"
                 tools:layout_editor_absoluteX="204dp"
                 tools:layout_editor_absoluteY="318dp" />
@@ -96,7 +96,7 @@
                 android:id="@+id/buttonPer"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:text="*"
                 tools:layout_editor_absoluteX="261dp"
                 tools:layout_editor_absoluteY="68dp" />
@@ -110,7 +110,7 @@
                 android:id="@+id/button4"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="75dp"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:text="4"
                 tools:layout_editor_absoluteX="28dp"
                 tools:layout_editor_absoluteY="368dp" />
@@ -119,7 +119,7 @@
                 android:id="@+id/button5"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="76dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:text="5"
                 tools:layout_editor_absoluteX="103dp"
                 tools:layout_editor_absoluteY="366dp" />
@@ -128,7 +128,7 @@
                 android:id="@+id/button6"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:text="6"
                 tools:layout_editor_absoluteX="181dp"
                 tools:layout_editor_absoluteY="366dp" />
@@ -137,7 +137,7 @@
                 android:id="@+id/buttonMeno"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:text="-"
                 tools:layout_editor_absoluteX="220dp"
                 tools:layout_editor_absoluteY="51dp" />
@@ -151,7 +151,7 @@
                 android:id="@+id/button1"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="75dp"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:text="1"
                 tools:layout_editor_absoluteX="28dp"
                 tools:layout_editor_absoluteY="416dp" />
@@ -160,7 +160,7 @@
                 android:id="@+id/button2"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="78dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:text="2"
                 tools:layout_editor_absoluteX="103dp"
                 tools:layout_editor_absoluteY="416dp" />
@@ -169,7 +169,7 @@
                 android:id="@+id/button3"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="80dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:text="3"
                 tools:layout_editor_absoluteX="181dp"
                 tools:layout_editor_absoluteY="416dp" />
@@ -178,7 +178,7 @@
                 android:id="@+id/buttonPiu"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="101dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:text="+"
                 tools:layout_editor_absoluteX="129dp"
                 tools:layout_editor_absoluteY="54dp" />
@@ -194,7 +194,7 @@
                 android:id="@+id/button0"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:layout_span="3"
                 android:text="0"
                 tools:layout_editor_absoluteX="148dp"
@@ -204,7 +204,7 @@
                 android:id="@+id/buttonUguale"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="102dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@android:color/holo_blue_bright"
                 android:text="="
                 tools:layout_editor_absoluteX="79dp"
