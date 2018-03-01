@@ -213,4 +213,13 @@
         </TableRow>
     </TableLayout>
 
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="58dp" />
+
 </android.support.constraint.ConstraintLayout>
