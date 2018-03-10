@@ -4,28 +4,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    private Button button0;
-    private Button button1;
-    private Button button2;
-    private Button button3;
-    private Button button4;
-    private Button button5;
-    private Button button6;
-    private Button button7;
-    private Button button8;
-    private Button button9;
-    private Button buttonPiu;
-    private Button buttonMeno;
-    private Button buttonDivisione;
-    private Button buttonPer;
-    private Button buttonUguale;
-    private Button buttonCancella;
-    private Button buttonMpiu;
-    private Button buttonM;
-
+    private Button button0, button1, button2, button3, button4, button5, button6, button7, button8, button9, buttonPiu, buttonMeno, buttonDivisione, buttonPer, buttonUguale, buttonCancella, buttonMpiu, buttonM;
+    private EditText editText;
+    private double x, y;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +23,75 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v.getId()==button0.getId()){
-            Toast t=  Toast.makeText(getApplicationContext(),"0",Toast.LENGTH_SHORT);
-            t.show();
+            editText.setText(editText.getText() + "0");
+        }
+
+        if (v.getId()==button1.getId()){
+            editText.setText(editText.getText() + "1");
+        }
+
+        if (v.getId()==button2.getId()){
+            editText.setText(editText.getText() + "2");
+        }
+
+        if (v.getId()==button3.getId()){
+            editText.setText(editText.getText() + "3");
+        }
+
+        if (v.getId()==button4.getId()){
+            editText.setText(editText.getText() + "4");
+        }
+
+        if (v.getId()==button5.getId()){
+            editText.setText(editText.getText() + "5");
+        }
+
+        if (v.getId()==button6.getId()){
+            editText.setText(editText.getText() + "6");
+        }
+
+        if (v.getId()==button7.getId()){
+            editText.setText(editText.getText() + "7");
+        }
+
+        if (v.getId()==button8.getId()){
+            editText.setText(editText.getText() + "8");
+        }
+
+        if (v.getId()==button9.getId()){
+            editText.setText(editText.getText() + "9");
+        }
+
+        if (v.getId()==buttonPiu.getId()){
+            editText.setText(editText.getText() + " + ");
+        }
+
+        if (v.getId()==buttonMeno.getId()){
+            editText.setText(editText.getText() + " - ");
+        }
+
+        if (v.getId()==buttonDivisione.getId()){
+            editText.setText(editText.getText() + " / ");
+        }
+
+        if (v.getId()==buttonPer.getId()){
+            editText.setText(editText.getText() + " * ");
+        }
+
+        if (v.getId()==buttonUguale.getId()){
+
+        }
+
+        if (v.getId()==buttonM.getId()){
+
+        }
+
+        if (v.getId()==buttonMpiu.getId()){
+
+        }
+
+        if (v.getId()==buttonCancella.getId()){
+            editText.setText("");
         }
     }
 
@@ -80,5 +132,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonMpiu.setOnClickListener(this);
         buttonM = findViewById(R.id.buttonMemoria);
         buttonM.setOnClickListener(this);
+        editText = findViewById(R.id.editText);
     }
 }
