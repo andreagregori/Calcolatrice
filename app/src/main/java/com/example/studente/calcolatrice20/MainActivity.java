@@ -1,97 +1,195 @@
 package com.example.studente.calcolatrice20;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private Button button0, button1, button2, button3, button4, button5, button6, button7, button8, button9, buttonPiu, buttonMeno, buttonDivisione, buttonPer, buttonUguale, buttonCancella, buttonMpiu, buttonM;
-    private EditText editText;
-    private double x, y;
+    private boolean p=false, m=false, mol=false, div=false, ris=false;
+    private TextView editText, editText2;
+    private double x, y ,mem;
+    private SharedPreferences sp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         elementiGrafici();
-
+        sp = getSharedPreferences("memoria", MODE_PRIVATE);
     }
 
     @Override
     public void onClick(View v) {
         if (v.getId()==button0.getId()){
+            if (ris == true) {
+                editText.setText("");
+                editText2.setText("");
+                ris=false;
+            }
             editText.setText(editText.getText() + "0");
         }
 
         if (v.getId()==button1.getId()){
+            if (ris == true) {
+                editText.setText("");
+                editText2.setText("");
+                ris=false;
+            }
             editText.setText(editText.getText() + "1");
         }
 
         if (v.getId()==button2.getId()){
+            if (ris == true) {
+                editText.setText("");
+                editText2.setText("");
+                ris=false;
+            }
             editText.setText(editText.getText() + "2");
         }
 
         if (v.getId()==button3.getId()){
+            if (ris == true) {
+                editText.setText("");
+                editText2.setText("");
+                ris=false;
+            }
             editText.setText(editText.getText() + "3");
         }
 
         if (v.getId()==button4.getId()){
+            if (ris == true) {
+                editText.setText("");
+                editText2.setText("");
+                ris=false;
+            }
             editText.setText(editText.getText() + "4");
         }
 
         if (v.getId()==button5.getId()){
+            if (ris == true) {
+                editText.setText("");
+                editText2.setText("");
+                ris=false;
+            }
             editText.setText(editText.getText() + "5");
         }
 
         if (v.getId()==button6.getId()){
+            if (ris == true) {
+                editText.setText("");
+                editText2.setText("");
+                ris=false;
+            }
             editText.setText(editText.getText() + "6");
         }
 
         if (v.getId()==button7.getId()){
+            if (ris == true) {
+                editText.setText("");
+                editText2.setText("");
+                ris=false;
+            }
             editText.setText(editText.getText() + "7");
         }
 
         if (v.getId()==button8.getId()){
+            if (ris == true) {
+                editText.setText("");
+                editText2.setText("");
+                ris=false;
+            }
             editText.setText(editText.getText() + "8");
         }
 
         if (v.getId()==button9.getId()){
+            if (ris == true) {
+                editText.setText("");
+                editText2.setText("");
+                ris=false;
+            }
             editText.setText(editText.getText() + "9");
         }
 
         if (v.getId()==buttonPiu.getId()){
-            editText.setText(editText.getText() + " + ");
+            x = Double.parseDouble(editText.getText() + "");
+            p = true;
+            editText2.setText("+");
+            editText.setText("");
         }
 
         if (v.getId()==buttonMeno.getId()){
-            editText.setText(editText.getText() + " - ");
+            x = Double.parseDouble(editText.getText() + "");
+            m = true;
+            editText2.setText("-");
+            editText.setText("");
         }
 
         if (v.getId()==buttonDivisione.getId()){
-            editText.setText(editText.getText() + " / ");
+            x = Double.parseDouble(editText.getText() + "");
+            div = true;
+            editText2.setText("/");
+            editText.setText("");
         }
 
         if (v.getId()==buttonPer.getId()){
-            editText.setText(editText.getText() + " * ");
+            x = Double.parseDouble(editText.getText() + "");
+            mol = true;
+            editText2.setText("*");
+            editText.setText("");
         }
 
         if (v.getId()==buttonUguale.getId()){
+            y = Double.parseDouble(editText.getText() + "");
+            editText2.setText("=");
+            ris=true;
 
+            if (p == true){
+                editText.setText(x + y + "");
+                p=false;
+            }
+
+            if (m == true){
+                editText.setText(x - y + "");
+                m=false;
+            }
+
+            if (mol == true){
+                editText.setText(x * y + "");
+                mol=false;
+            }
+
+            if (div == true){
+                double z=x/y;
+                editText.setText(z + "");
+                div=false;
+            }
         }
 
         if (v.getId()==buttonM.getId()){
-
+            editText.setText(sp.getInt("mem", 0) + "");
         }
 
         if (v.getId()==buttonMpiu.getId()){
-
+            SharedPreferences.Editor editor = getSharedPreferences("memoria", MODE_PRIVATE).edit();
+            editor.putInt("mem", Integer.parseInt(editText.getText() + ""));
+            editor.apply();
+            Toast t=  Toast.makeText(getApplicationContext(),"M memorizzato", Toast.LENGTH_SHORT);
+            t.show();
         }
 
         if (v.getId()==buttonCancella.getId()){
             editText.setText("");
+            editText2.setText("");
+            p=false;
+            m=false;
+            mol=false;
+            div=false;
         }
     }
 
@@ -133,5 +231,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonM = findViewById(R.id.buttonMemoria);
         buttonM.setOnClickListener(this);
         editText = findViewById(R.id.editText);
+        editText2 = findViewById(R.id.editText2);
     }
 }
