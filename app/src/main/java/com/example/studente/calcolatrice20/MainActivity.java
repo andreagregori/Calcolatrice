@@ -176,11 +176,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         if (v.getId()==buttonMpiu.getId()){
-            SharedPreferences.Editor editor = getSharedPreferences("memoria", MODE_PRIVATE).edit();
-            editor.putInt("mem", Integer.parseInt(editText.getText() + ""));
-            editor.apply();
-            Toast t=  Toast.makeText(getApplicationContext(),"M memorizzato", Toast.LENGTH_SHORT);
-            t.show();
+            if(editText.getText()!="") {
+                SharedPreferences.Editor editor = getSharedPreferences("memoria", MODE_PRIVATE).edit();
+                editor.putInt("mem", Integer.parseInt(editText.getText() + ""));
+                editor.apply();
+                Toast t = Toast.makeText(getApplicationContext(), "M memorizzato", Toast.LENGTH_SHORT);
+                t.show();
+            }
         }
 
         if (v.getId()==buttonCancella.getId()){

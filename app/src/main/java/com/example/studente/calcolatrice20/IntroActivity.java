@@ -28,7 +28,7 @@ public class IntroActivity extends AppCompatActivity{
         Thread intro=new Thread(){
             public void run(){
                 try {
-                    sleep(2000);
+                    sleep(2500);
                 } catch (Exception e){
                     e.printStackTrace();
                 } finally {

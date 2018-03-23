@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Calcolatrice.iml" filepath="$PROJECT_DIR$/Calcolatrice.iml" />
       <module fileurl="file://C:\Users\studente\AndroidStudioProjects\Calcolatrice\Calcolatrice.iml" filepath="C:\Users\studente\AndroidStudioProjects\Calcolatrice\Calcolatrice.iml" />
+      <module fileurl="file://D:\Andrea documenti\Android\Calcolatrice\Calcolatrice.iml" filepath="D:\Andrea documenti\Android\Calcolatrice\Calcolatrice.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\Andrea documenti\Android\Calcolatrice\app\app.iml" filepath="D:\Andrea documenti\Android\Calcolatrice\app\app.iml" />
       <module fileurl="file://C:\Users\studente\AndroidStudioProjects\Calcolatrice\app\app.iml" filepath="C:\Users\studente\AndroidStudioProjects\Calcolatrice\app\app.iml" />
     </modules>
   </component>
